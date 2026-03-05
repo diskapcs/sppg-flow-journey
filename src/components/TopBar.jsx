@@ -1,4 +1,4 @@
-import styles from './TopBar.module.css'
+import styles from "./TopBar.module.css";
 
 /**
  * TopBar
@@ -14,5 +14,5 @@ export default function TopBar() {
         👆 Klik area berwarna pada gambar untuk melihat detail flow
       </div>
     </header>
-  )
+  );
 }
