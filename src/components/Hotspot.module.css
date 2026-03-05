@@ -1,0 +1,95 @@
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px dashed rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
+  transition:
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 10;
+  outline: none;
+  padding: 0 80px;
+}
+
+/* .hotspot:hover,
+.hotspot:focus-visible {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.06),
+    inset 0 0 20px rgba(255, 255, 255, 0.04);
+} */
+
+/* Label shown on hover */
+.label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(8, 22, 13, 0.88);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px 4px 4px;
+  border-radius: 8px;
+  margin: 6px;
+  opacity: 0;
+  transition: opacity 0.18s;
+  pointer-events: none;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+  max-width: calc(100% - 12px);
+  overflow: hidden;
+}
+
+.hotspot:hover .label,
+.hotspot:focus-visible .label {
+  opacity: 1;
+}
+
+.stepChip {
+  background: var(--accent, #2d7a4f);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 5px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+/* Pulse dot */
+/* .pulse {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.18s;
+  animation: pulse 2s infinite;
+} */
+
+.hotspot:hover .pulse,
+.hotspot:focus-visible .pulse {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
